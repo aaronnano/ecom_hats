@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-urbanist
+    }
+}
+
+.show {
+    @apply opacity-100 
+}
+.hide {
+    @apply opacity-0 invisible
+}
+
+.ring-l-1 {
+    box-shadow: 1px 0 0 #000 inset;
+}
+.ring-l-1\.5 {
+    box-shadow: 1.5px 0 0 #000 inset;
+}
+.ring-l-2 {
+    box-shadow: 2px 0 0 #000 inset;
+}
+.hover\:ring-l-1:hover {
+    @apply  ring-l-1
+}
+.hover\:ring-l-2:hover {
+    @apply  ring-l-2
+}
+.ring-b-1 {
+    box-shadow: 0 -1px 0 #000 inset;
+}
+.ring-b-2 {
+    box-shadow: 0 -2px 0 0 #000 inset;
+}
+.hover\:ring-b-1:hover {
+    @apply  ring-b-1
+}
+.hover\:ring-b-2:hover {
+    @apply  ring-b-2
+}
+.ring-t-1 {
+    box-shadow: 0 1px 0 #000 inset;
+}
+.ring-t-2 {
+    box-shadow: 0 2px 0 0 #000 inset;
+}
+.hover\:ring-t-1:hover {
+    @apply  ring-t-1
+}
+.hover\:ring-t-2:hover {
+    @apply  ring-t-2
+}
+.ring-r-1 {
+    box-shadow: 1px 0 0 #000;
+}
