@@ -17,7 +17,8 @@ export const useApi = () => {  // Nota: el messageApi como modo de excepcion deb
     const { user, checkToken } = useAuthStore()
     const { items, startLoadCartItems } = useCartStore()
     const [dataApi, setDataApi] = useState({})
-    
+
+
     const startUpdateUser = async(dataUser) => {
         dispatch(onLoading())
         try {
@@ -62,10 +63,9 @@ export const useApi = () => {  // Nota: el messageApi como modo de excepcion deb
         } catch (err) {
             await checkToken()
             await startLoadCartItems()
-            if (err.response.status === 500){
-                const { error, msg } = err.response.data
-                console.log({error, msg})
-            }
+
+            console.log({err})
+            
             setMessageApi('Error in updating the avatar')
         }
         return dispatch(onSetLoadingApi(false))

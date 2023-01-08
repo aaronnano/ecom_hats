@@ -15,7 +15,7 @@ export const Home = () => {
     useEffect(() => {
         setTimeout(() => {
             setState({})
-        }, 50)
+        }, 200)
         window.addEventListener('resize', onResize)
 
         return () => {
